@@ -51,8 +51,8 @@
 		631580612A0B977500B42639 /* iUnits */ = {
 			isa = PBXGroup;
 			children = (
-				631580622A0B977500B42639 /* iUnitsApp.swift */,
 				631580642A0B977500B42639 /* ContentView.swift */,
+				631580622A0B977500B42639 /* iUnitsApp.swift */,
 				631580662A0B977A00B42639 /* Assets.xcassets */,
 				631580682A0B977A00B42639 /* Preview Content */,
 			);

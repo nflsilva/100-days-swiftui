@@ -9,48 +9,54 @@ import SwiftUI
 
 struct ContentView: View {
     
-    private static let conversions = [
-        "Temperature" : ["Celsius", "Fahrenheit", "Kelvin"],
-        "Length": ["Meters", "Kilometers", "Feet", "Yards", "Miles"],
-        "Time": ["Seconds", "Minutes", "Hours", "Days"],
-        "Volume": ["Milliliters", "Liters", "Cups", "Pints", "Gallons"]
-    ]
+    private let units = ["Seconds", "Minutes", "Hours", "Days"]
+    private let unitJumps = [60, 60, 24]
     
     @State var valueToConvert = 0.0
-    @State var selectedConversion = "Temperature"
-    @State var selectedConversionFromUnit = "Celsius"
-    @State var selectedConversionToUnit = "Fahrenheit"
+    @State var selectedConversionFromUnit = "Seconds"
+    @State var selectedConversionToUnit = "Seconds"
     @FocusState private var mealPriceIsFocus: Bool
     
-    private var selectedUnits: [String] {
-        return ContentView.conversions[selectedConversion] ?? []
+    private func unitToLevel(unit: String) -> Int? {
+        return units.firstIndex(of: unit)
     }
+    
     private var convertedValue: Double {
-        return valueToConvert
+        
+        guard
+            var fromLevel = unitToLevel(unit: selectedConversionFromUnit),
+            var toLevel = unitToLevel(unit: selectedConversionToUnit) else {
+            return valueToConvert
+        }
+        
+        var finalValue = valueToConvert
+        if fromLevel > toLevel {
+            for i in toLevel ..< fromLevel {
+                finalValue *= Double(unitJumps[i])
+            }
+        }
+        else if fromLevel < toLevel {
+            for i in fromLevel ..< toLevel {
+                finalValue /= Double(unitJumps[i])
+            }
+        }
+        
+        return finalValue
     }
-    
-    
     
     var body: some View {
         NavigationView {
             Form {
                 
                 Section {
-                    Picker("Conversions", selection: $selectedConversion) {
-                        ForEach(ContentView.conversions.keys.compactMap { $0 }, id: \.self) {
-                            Text($0)
-                        }
-                    }
-                    .pickerStyle(.segmented)
-                    .keyboardType(.numberPad)
                     TextField("Value to convert", value: $valueToConvert, format: .number)
                 } header: {
-                    Text("Converting units")
+                    Text("Converting Time Units")
                 }
                 
                 Section {
                     Picker("Conversions", selection: $selectedConversionFromUnit) {
-                        ForEach(selectedUnits, id: \.self) {
+                        ForEach(units, id: \.self) {
                             Text($0)
                         }
                     }
@@ -62,7 +68,7 @@ struct ContentView: View {
                 
                 Section {
                     Picker("Conversions",selection: $selectedConversionToUnit) {
-                        ForEach(selectedUnits, id: \.self) {
+                        ForEach(units, id: \.self) {
                             Text($0)
                         }
                     }
