@@ -34,45 +34,52 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
+
             LinearGradient(gradient: Gradient(colors: [.blue, .black]),
                            startPoint: .topLeading,
                            endPoint: .bottomTrailing)
                 .ignoresSafeArea()
                 .frame(maxWidth: .infinity)
             
-            VStack(spacing: 75) {
+            VStack(spacing: 20) {
                 
-                VStack {
-                    Text("Play to")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                    Text(playToWin ? "Win!" : "Lose!")
-                        .font(.largeTitle).bold()
-                        .foregroundColor(playToWin ? .green : .red)
-                }
-
-                HStack {
-                    HandSelectionImage(image: gestures[cpuGesture])
-                }
-                
-                HStack(spacing: 25) {
-                    Spacer()
-                    ForEach(0..<3) { gestureId in
-                        Button {
-                            selectGesture(gestureId)
-                        } label: {
-                            HandSelectionImage(image: gestures[gestureId])
-                        }
-                        
+                Spacer()
+                VStack(spacing: 75) {
+                    VStack {
+                        Text("Play to")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+                        Text(playToWin ? "Win!" : "Lose!")
+                            .font(.largeTitle).bold()
+                            .foregroundColor(playToWin ? .green : .red)
                     }
-                    Spacer()
+
+                    HStack {
+                        HandSelectionImage(image: gestures[cpuGesture])
+                    }
+                    
+                    HStack(spacing: 25) {
+                        Spacer()
+                        ForEach(0..<3) { gestureId in
+                            Button {
+                                selectGesture(gestureId)
+                            } label: {
+                                HandSelectionImage(image: gestures[gestureId])
+                            }
+                            
+                        }
+                        Spacer()
+                    }
+                    HStack {
+                        Text("Score: \(score)")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+                    }
                 }
-                HStack {
-                    Text("Score: \(score)")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                }
+                Spacer()
+                
             }
+            
         }
     }
     
