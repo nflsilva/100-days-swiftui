@@ -79,6 +79,7 @@ struct ContentView: View {
                             Text($0 == 1 ? "1 cup" : "\($0) cups")
                         }
                     }
+                           .onChange(of: dailyCofeeCups) { _ in calculatedBedTime() }
                 }
                 
                 if let sleepTime = sleepTime {
