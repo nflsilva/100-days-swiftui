@@ -17,6 +17,7 @@
 		88740D9B2A2BEF4000412E78 /* Bundle+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88740D9A2A2BEF4000412E78 /* Bundle+Decodable.swift */; };
 		88740D9E2A2BEFA400412E78 /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88740D9D2A2BEFA400412E78 /* Astronaut.swift */; };
 		88740DA02A2BF0B200412E78 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88740D9F2A2BF0B200412E78 /* Mission.swift */; };
+		8875CC932A2E8AD300A2B5BB /* MissionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8875CC922A2E8AD300A2B5BB /* MissionDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		88740D9A2A2BEF4000412E78 /* Bundle+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Decodable.swift"; sourceTree = "<group>"; };
 		88740D9D2A2BEFA400412E78 /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
 		88740D9F2A2BF0B200412E78 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		8875CC922A2E8AD300A2B5BB /* MissionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				88740D962A2BED9D00412E78 /* missions.json */,
 				88740D8E2A2BED7700412E78 /* Preview Content */,
 				882294A92A2BFC5F005ED37B /* Color+Theme.swift */,
+				8875CC922A2E8AD300A2B5BB /* MissionDetailView.swift */,
 			);
 			path = Moonshot;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8875CC932A2E8AD300A2B5BB /* MissionDetailView.swift in Sources */,
 				88740D8B2A2BED7400412E78 /* ContentView.swift in Sources */,
 				88740D9B2A2BEF4000412E78 /* Bundle+Decodable.swift in Sources */,
 				88740D892A2BED7400412E78 /* MoonshotApp.swift in Sources */,
