@@ -9,11 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
-    private let astronauts: [String: Astronaut] =
-    Bundle.main.decode("astronauts.json")
+    private let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
     
-    private let missions: [Mission] =
-    Bundle.main.decode("missions.json")
+    private let missions: [Mission] = Bundle.main.decode("missions.json")
     
     let columns = [
         GridItem(.adaptive(minimum: 150))
@@ -58,12 +56,11 @@ struct ContentView: View {
                         }
                     }
                 }
-                .padding([.horizontal, .bottom])
+                .padding()
             }
             .navigationTitle("Moonshot")
             .background(.darkBackground)
             .preferredColorScheme(.dark)
-
         }
         
     }

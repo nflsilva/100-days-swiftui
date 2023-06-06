@@ -39,22 +39,33 @@ struct MissionDetailView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: geometry.size.width * 0.6)
-                    
+
                     VStack(alignment: .leading) {
+                        
+                        Divider()
+                            .padding(.vertical)
+                        
                         Text("Mission Highlights")
                             .font(.title.bold())
                             .padding(.bottom)
                         
                         Text(mission.description)
+                        
+                        Divider()
+                            .padding(.vertical)
+                        
+                        Text("Crew")
+                            .font(.title.bold())
                     }
                     .padding(.horizontal)
+                    
                 }
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         ForEach(roles, id: \.astronaut.name) { role in
                             NavigationLink {
-                                Text("Astronaut details")
+                                AstronautDetailView(astronaut: role.astronaut)
                             } label: {
                                 HStack {
                                     
@@ -75,7 +86,7 @@ struct MissionDetailView: View {
                                     }
                                 }
                             }
-                            .padding()
+                            .padding(.horizontal)
                         }
                     }
                 }
