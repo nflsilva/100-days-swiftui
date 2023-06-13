@@ -17,10 +17,8 @@ struct AddNewHabitView: View {
     @State private var showAlert: Bool = false
     
     var body: some View {
-        
-        VStack {
+        NavigationView {
             Form {
-                
                 Text("New Habit")
                     .font(.title)
                 
@@ -30,30 +28,23 @@ struct AddNewHabitView: View {
                     TextField("Periodicaly (hours)", value: $periodicalyHours, format: .number)
                         .keyboardType(.numberPad)
                 }
-
-                HStack {
-                    Button("Done") {
-                        
-                        do {
-                            try habitController.addHabit(habit: Habit(name: name, description: description, periodicityHours: periodicalyHours))
-                        } catch {
-                            showAlert = true
-                        }
-                        
-                        if !showAlert {
-                            dismiss()
-                        }
-                        
+            }
+            .toolbar {
+                Button {
+                    do {
+                        try habitController.addHabit(habit: Habit(name: name, description: description, periodicityHours: periodicalyHours))
+                    } catch {
+                        showAlert = true
                     }
-                    .foregroundColor(.primary)
                     
-                    Spacer()
-                    
-                    Button("Cancel") {
+                    if !showAlert {
                         dismiss()
                     }
-                    .foregroundColor(.primary)
+                    
+                } label : {
+                     Text("Create")
                 }
+                .foregroundColor(.primary)
             }
             .alert(isPresented: $showAlert) {
                 Alert(title: Text("Error"),
@@ -63,7 +54,6 @@ struct AddNewHabitView: View {
                 )
             }
         }
-
     }
 }
 

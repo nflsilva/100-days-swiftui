@@ -10,13 +10,13 @@ import Foundation
 class Habit: Codable, Identifiable, ObservableObject {
     
     enum CodingKeys: String, CodingKey {
-        case name = "name"
-        case description = "description"
-        case timesDone = "timesDone"
-        case periodicityHours = "periodicityHours"
-        case lastDoneAt = "lastDoneAt"
+        case name
+        case description
+        case timesDone
+        case periodicityHours
+        case lastDoneAt
     }
-    
+
     let id: UUID = UUID()
     let name: String
     let description: String
@@ -24,6 +24,24 @@ class Habit: Codable, Identifiable, ObservableObject {
     let periodicityHours: UInt
     var lastDoneAt: Date?
 
+    required init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        name = try values.decode(String.self, forKey: .name)
+        description = try values.decode(String.self, forKey: .description)
+        timesDone = try values.decode(UInt.self, forKey: .timesDone)
+        periodicityHours = try values.decode(UInt.self, forKey: .periodicityHours)
+        lastDoneAt = try values.decode(Date?.self, forKey: .lastDoneAt)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(name, forKey: .name)
+        try container.encode(description, forKey: .description)
+        try container.encode(timesDone, forKey: .timesDone)
+        try container.encode(periodicityHours, forKey: .periodicityHours)
+        try container.encode(lastDoneAt, forKey: .lastDoneAt)
+    }
+    
     init(name: String, description: String, periodicityHours: UInt) {
         self.name = name
         self.description = description
@@ -31,14 +49,6 @@ class Habit: Codable, Identifiable, ObservableObject {
         self.lastDoneAt = nil
     }
     
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-    }
-    
-    func decode(from decoder: Decoder) throws {
-        var container = decoder.container(keyedBy: CodingKeys.self)
-    }
- 
     var wasDoneWithinPeriod: Bool {
         if lastDoneAt == nil {
             return false
@@ -50,7 +60,7 @@ class Habit: Codable, Identifiable, ObservableObject {
     }
     
     var displayDate: String? {
-        lastDoneAt?.formatted(date: .abbreviated, time: .omitted)
+        lastDoneAt?.formatted(date: .abbreviated, time: .shortened)
     }
     
 }

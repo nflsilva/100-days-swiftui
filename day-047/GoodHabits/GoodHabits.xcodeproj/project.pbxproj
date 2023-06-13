@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6371D03D2A37299A00230096 /* HabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6371D03C2A37299A00230096 /* HabitDetailView.swift */; };
+		888325372A38B824009828A2 /* ContentViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888325362A38B824009828A2 /* ContentViewRow.swift */; };
 		888B17192A362E0900A1A19A /* GoodHabitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B17182A362E0900A1A19A /* GoodHabitsApp.swift */; };
 		888B171B2A362E0900A1A19A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B171A2A362E0900A1A19A /* ContentView.swift */; };
 		888B171D2A362E0E00A1A19A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888B171C2A362E0E00A1A19A /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		6371D03C2A37299A00230096 /* HabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailView.swift; sourceTree = "<group>"; };
+		888325362A38B824009828A2 /* ContentViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewRow.swift; sourceTree = "<group>"; };
 		888B17152A362E0900A1A19A /* GoodHabits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodHabits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		888B17182A362E0900A1A19A /* GoodHabitsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodHabitsApp.swift; sourceTree = "<group>"; };
 		888B171A2A362E0900A1A19A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				888B171A2A362E0900A1A19A /* ContentView.swift */,
 				888B17332A3646D000A1A19A /* AddNewHabitView.swift */,
 				6371D03C2A37299A00230096 /* HabitDetailView.swift */,
+				888325362A38B824009828A2 /* ContentViewRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				888B17282A362E4100A1A19A /* Habit.swift in Sources */,
 				888B172F2A3636D600A1A19A /* MiscSettings.swift in Sources */,
 				888B171B2A362E0900A1A19A /* ContentView.swift in Sources */,
+				888325372A38B824009828A2 /* ContentViewRow.swift in Sources */,
 				888B17312A3640E400A1A19A /* Color+CoolColors.swift in Sources */,
 				6371D03D2A37299A00230096 /* HabitDetailView.swift in Sources */,
 				888B17192A362E0900A1A19A /* GoodHabitsApp.swift in Sources */,

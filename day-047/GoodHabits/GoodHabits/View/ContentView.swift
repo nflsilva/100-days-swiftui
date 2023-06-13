@@ -15,28 +15,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(habitController.habits.sorted { $0.timesDone > $1.timesDone }) { habit in
-                NavigationLink {
-                    HabitDetailView(habit: habit)
-                } label: {
-                    VStack(alignment: .leading) {
-                        
-                        HStack {
-                            Text(habit.name)
-                                .font(.headline)
-                            if habit.wasDoneWithinPeriod {
-                                Image(systemName: "checkmark.seal.fill")
-                                    .foregroundColor(.green)
-                            }
-                        }
-
-                        Text(habit.timesDone, format: .number)
-                            .font(.subheadline.smallCaps())
-                        
-                        Text("Done at: \(habit.displayDate ?? "never")")
-                            .font(.subheadline)
-                    }
-                }
-                .padding(.vertical)
+                ContentViewRow( habit: habit, habitController: habitController)
             }
             .navigationTitle("GoodHabits")
             .toolbar {

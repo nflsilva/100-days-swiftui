@@ -14,13 +14,7 @@ class HabitController: ObservableObject {
         case invalidData
     }
     
-    @Published var habits = [Habit]() {
-        didSet {
-            if let encoded = try? JSONEncoder().encode(habits) {
-                UserDefaults.standard.set(encoded, forKey: "habits")
-            }
-        }
-    }
+    @Published var habits = [Habit]()
     
     init() {
         if let jsonData = UserDefaults.standard.data(forKey: "habits"),
@@ -29,6 +23,12 @@ class HabitController: ObservableObject {
             return
         }
         habits = []
+    }
+    
+    func saveHabits() {
+        if let encoded = try? JSONEncoder().encode(habits) {
+            UserDefaults.standard.set(encoded, forKey: "habits")
+        }
     }
     
     func addHabit(habit: Habit) throws {
@@ -41,6 +41,7 @@ class HabitController: ObservableObject {
         }
         
         habits.append(habit)
+        saveHabits()
     }
     
 }

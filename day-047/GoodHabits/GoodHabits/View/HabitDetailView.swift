@@ -11,6 +11,7 @@ struct HabitDetailView: View {
     
     @Environment(\.dismiss) private var dismiss
     @State var habit : Habit
+    let habitController: HabitController
     
     var body: some View {
         
@@ -44,6 +45,7 @@ struct HabitDetailView: View {
                     Button {
                         habit.timesDone += 1
                         habit.lastDoneAt = Date.now
+                        habitController.saveHabits()
                         dismiss()
                     } label: {
                         Text("Done just now!")
@@ -72,7 +74,8 @@ struct HabitDetailView: View {
 
 struct HabitDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        let habit = HabitController().habits[0]
-        HabitDetailView(habit: habit)
+        let controller = HabitController()
+        let habit = controller.habits[0]
+        HabitDetailView(habit: habit, habitController: controller)
     }
 }
