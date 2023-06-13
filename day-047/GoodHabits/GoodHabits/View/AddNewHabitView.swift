@@ -33,7 +33,17 @@ struct AddNewHabitView: View {
 
                 HStack {
                     Button("Done") {
-                        dismiss()
+                        
+                        do {
+                            try habitController.addHabit(habit: Habit(name: name, description: description, periodicityHours: periodicalyHours))
+                        } catch {
+                            showAlert = true
+                        }
+                        
+                        if !showAlert {
+                            dismiss()
+                        }
+                        
                     }
                     .foregroundColor(.primary)
                     
@@ -44,6 +54,13 @@ struct AddNewHabitView: View {
                     }
                     .foregroundColor(.primary)
                 }
+            }
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("Error"),
+                      message: Text("Habit \(name) already exists."),
+                      dismissButton: .default(Text("Ok"))
+                
+                )
             }
         }
 

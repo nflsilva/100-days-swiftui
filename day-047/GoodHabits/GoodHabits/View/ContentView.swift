@@ -16,9 +16,10 @@ struct ContentView: View {
         NavigationView {
             List(habitController.habits.sorted { $0.timesDone > $1.timesDone }) { habit in
                 NavigationLink {
-                    
+                    HabitDetailView(habit: habit)
                 } label: {
                     VStack(alignment: .leading) {
+                        
                         HStack {
                             Text(habit.name)
                                 .font(.headline)
@@ -49,10 +50,8 @@ struct ContentView: View {
                     AddNewHabitView(habitController: habitController)
                 }
             }
-
         }
     }
-    
 
 }
 

@@ -11,7 +11,7 @@ class HabitController: ObservableObject {
     
     enum HabitError: Error {
         case duplicatedName
-        case general
+        case invalidData
     }
     
     @Published var habits = [Habit]() {
@@ -35,6 +35,11 @@ class HabitController: ObservableObject {
         if habits.contains(where: { h in  h.name == habit.name }) {
             throw HabitError.duplicatedName
         }
+        
+        if habit.name == "" || habit.description == "" {
+            throw HabitError.invalidData
+        }
+        
         habits.append(habit)
     }
     
