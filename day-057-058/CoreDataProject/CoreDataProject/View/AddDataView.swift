@@ -35,7 +35,7 @@ struct AddDataView: View {
         
         addArtistData(name: "Linkin Park",
                       picture: "lp",
-                      tracks: ["Papercut", "In the End", "Feint", "One step closer"])
+                      tracks: ["Papercut", "In the End", "Faint", "One step closer"])
         
         addArtistData(name: "Guano Apes",
                       picture: "ga",

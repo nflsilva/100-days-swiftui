@@ -22,7 +22,7 @@ struct ContentView: View {
                 }
                     
                 AwesomeTemplateView(filterKey: "name", filterValue: searchTerm) { (a: Track) in
-                    Text(a.wrappedName)
+                    TrackRowView(track: a, showArtist: true)
                 }
                 .tabItem {
                     Image(systemName: "music.note")

@@ -17,10 +17,14 @@ public class Artist: NSManagedObject {
     }
     
     public var wrappedPicture: String {
-        return picture ?? "bb"
+        return picture ?? "ga"
     }
     
     public var wrappedNumberOfTracks: Int {
         return tracks?.count ?? 0
+    }
+    
+    public var wrappedTracks: [Track] {
+        return tracks?.allObjects as? [Track] ?? [Track]()
     }
 }

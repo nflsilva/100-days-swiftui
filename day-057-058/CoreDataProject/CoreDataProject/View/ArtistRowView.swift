@@ -9,39 +9,43 @@ import SwiftUI
 
 struct ArtistRowView: View {
     
-    @State var artist: Artist
+    var artist: Artist
     
     var body: some View {
         
-        HStack {
-            Image(artist.wrappedPicture)
-                .resizable()
-                .scaledToFill()
-                .frame(width: 75, height: 75)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-                .overlay {
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(.primary)
+        NavigationLink(destination: ArtistDetailView(artist: artist)) {
+            HStack {
+                Image(artist.wrappedPicture)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 75, height: 75)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(.primary)
+                    }
+                    .padding()
+                
+                VStack(alignment: .leading) {
+                    Text(artist.wrappedName)
+                        .font(.headline)
+                    Text("\(artist.wrappedNumberOfTracks) tracks")
+                        .font(.subheadline)
                 }
-                .padding()
-            
-            VStack(alignment: .leading) {
-                Text(artist.wrappedName)
-                    .font(.headline)
-                Text("\(artist.wrappedNumberOfTracks) tracks")
-                    .font(.subheadline)
+                Spacer()
+                VStack {
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(.primary)
+                }
+                .padding(.horizontal)
             }
-            Spacer()
-            VStack {
-                Image(systemName: "chevron.right")
-                    .foregroundColor(.primary)
-            }
+            .frame(maxWidth: .infinity)
+            .background(.ultraThinMaterial)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
             .padding(.horizontal)
         }
-        .frame(maxWidth: .infinity)
-        .background(.ultraThinMaterial)
-        .clipShape(RoundedRectangle(cornerRadius: 10))
-        .padding(.horizontal)
+        .foregroundColor(.primary)
+        
     }
 }
 

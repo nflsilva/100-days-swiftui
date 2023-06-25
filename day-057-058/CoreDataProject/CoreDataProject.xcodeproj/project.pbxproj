@@ -21,6 +21,7 @@
 		88A1A5C32A479DC000F1A2B8 /* AddDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1A5C22A479DC000F1A2B8 /* AddDataView.swift */; };
 		88A1A5C52A47ACBC00F1A2B8 /* ArtistRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1A5C42A47ACBC00F1A2B8 /* ArtistRowView.swift */; };
 		88A1A5C72A47B67800F1A2B8 /* ArtistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1A5C62A47B67800F1A2B8 /* ArtistDetailView.swift */; };
+		88A1A5C92A48961200F1A2B8 /* TrackRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1A5C82A48961100F1A2B8 /* TrackRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		88A1A5C22A479DC000F1A2B8 /* AddDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataView.swift; sourceTree = "<group>"; };
 		88A1A5C42A47ACBC00F1A2B8 /* ArtistRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistRowView.swift; sourceTree = "<group>"; };
 		88A1A5C62A47B67800F1A2B8 /* ArtistDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailView.swift; sourceTree = "<group>"; };
+		88A1A5C82A48961100F1A2B8 /* TrackRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				88A1A5C22A479DC000F1A2B8 /* AddDataView.swift */,
 				88A1A5C42A47ACBC00F1A2B8 /* ArtistRowView.swift */,
 				88A1A5C62A47B67800F1A2B8 /* ArtistDetailView.swift */,
+				88A1A5C82A48961100F1A2B8 /* TrackRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				88A1A5B12A47547100F1A2B8 /* Newnamp.xcdatamodeld in Sources */,
 				88A1A5C72A47B67800F1A2B8 /* ArtistDetailView.swift in Sources */,
 				88A1A5B72A475AB500F1A2B8 /* Track+CoreDataProperties.swift in Sources */,
+				88A1A5C92A48961200F1A2B8 /* TrackRowView.swift in Sources */,
 				88A1A59F2A47530C00F1A2B8 /* CoreDataProjectApp.swift in Sources */,
 				88A1A5B92A475AB500F1A2B8 /* Artist+CoreDataProperties.swift in Sources */,
 				88A1A5C52A47ACBC00F1A2B8 /* ArtistRowView.swift in Sources */,
