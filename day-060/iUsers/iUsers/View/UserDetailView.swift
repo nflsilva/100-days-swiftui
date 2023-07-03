@@ -27,11 +27,17 @@ struct UserDetailView: View {
     
     let user: UserDTO
     
+    private let gridItemLayout = [
+        GridItem(.flexible(), spacing: 1),
+        GridItem(.flexible(), spacing: 1),
+        GridItem(.flexible(), spacing: 1)
+    ]
+    
     var body: some View {
         
         ScrollView {
             
-            VStack {
+            LazyVStack {
                 
                 HStack {
                     
@@ -81,6 +87,7 @@ struct UserDetailView: View {
                     }
                     .padding(.horizontal)
                 }
+                .padding(.horizontal)
                 
                 VStack {
                     
@@ -97,24 +104,40 @@ struct UserDetailView: View {
                     }
 
                     HStack(alignment: .top) {
-                        Text("Followed by")
-                            .opacity(0.35)
-                        
-                        Text(user.randomFollowers)
-                        
+                        Group {
+                            Text("Tagged by ")
+                                .foregroundColor(.primary.opacity(0.25)) +
+                            
+                            Text(user.randomTags) +
+                            
+                            Text(user.tags.count - 3 <= 0 ? "" : " + ")
+                                .foregroundColor(.primary.opacity(0.25)) +
+                            
+                            Text(user.tags.count - 3 <= 0 ? "" : "\(user.tags.count - 3) more")
+                        }
+
                         Spacer()
                     }
                     .padding(.top, 1)
   
                 }
-                .padding(.top)
-            
+                .padding()
+                
+                LazyVGrid(columns: gridItemLayout, spacing: 1) {
+                    ForEach(0..<90, id: \.self) { _ in
+                         Image("default-avatar")
+                            .resizable()
+                            .scaledToFit()
+                            .overlay {
+                                Color.black.opacity(0.25)
+                            }
+                    }
+                }
+                
             }
-            .padding(.horizontal)
             .navigationTitle(user.username)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                
                 HStack {
                     
                     Button {
@@ -130,11 +153,7 @@ struct UserDetailView: View {
                         Image(systemName: "line.3.horizontal")
                     }
                     .foregroundColor(.primary)
-                    
-
                 }
-                
-                
             }
 
         }

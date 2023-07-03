@@ -27,16 +27,15 @@ struct UserDTO: Identifiable, Decodable {
             .lowercased()
     }
     
-    var randomFollowers: String {
+    var randomTags: String {
         var r = ""
         let n = 3
         for f in 0..<n {
-            r += friends.randomElement()?.username ?? "@unknown"
+            r += tags.randomElement() ?? "@unknown"
             if f < (n - 1) {
                 r += ", "
             }
         }
-        r += " + \(friends.count / 2) more"
         return r
     }
     
