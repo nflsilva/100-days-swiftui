@@ -103,6 +103,11 @@ struct UserDetailView: View {
                         Spacer()
                     }
 
+                    HStack {
+                        Text(user.address)
+                        Spacer()
+                    }
+                    
                     HStack(alignment: .top) {
                         Group {
                             Text("Tagged by ")
@@ -118,16 +123,60 @@ struct UserDetailView: View {
 
                         Spacer()
                     }
-                    .padding(.top, 1)
-  
+                    
+                    ScrollView(.horizontal) {
+                        LazyHStack {
+                            ForEach(user.friends) { friend in
+                                VStack {
+                                    Image("default-avatar")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 75, height: 75)
+                                        .clipShape(Circle())
+                                        .overlay {
+                                            Circle()
+                                                .stroke(.black.opacity(0.35))
+                                        }
+                                        .padding(3)
+                                        .overlay {
+                                            Circle()
+                                                .stroke(.black, lineWidth: 2)
+                                                .opacity(0.35)
+                                        }
+                                    Text(friend.name)
+                                }
+
+                            }
+                        }
+                    }
+                    .padding(.vertical)
+                    
                 }
                 .padding()
+                
+                HStack  {
+                    Spacer()
+                    Button {
+                        
+                    } label : {
+                        Image(systemName: "square.grid.2x2")
+                    }
+                    Spacer()
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "person.crop.circle")
+                    }
+                    Spacer()
+                }
+                .font(.largeTitle)
+                .foregroundColor(.primary.opacity(0.75))
                 
                 LazyVGrid(columns: gridItemLayout, spacing: 1) {
                     ForEach(0..<90, id: \.self) { _ in
                          Image("default-avatar")
                             .resizable()
-                            .scaledToFit()
+                            .scaledToFill()
                             .overlay {
                                 Color.black.opacity(0.25)
                             }
@@ -172,7 +221,7 @@ struct UserDetailView_Previews: PreviewProvider {
                                      email: "some-email@company.net",
                                      address: "5th Elm's Street, NES",
                                      about: "Consectetur mollit fugiat dolor ea esse reprehenderit enim laboris laboris. Eiusmod consectetur quis cillum tempor veniam deserunt do. Qui ea amet esse qui mollit non non dolor sint consequat ullamco cillum. Sunt aute elit qui elit.",
-                                     tags: ["tag1", "tag2", "tag3"],
-                                     friends: []))
+                                     tags: ["tag1", "tag2", "tag3", "tag4"],
+                                     friends: [FriendDTO(id: UUID(), name: "Jane Doe")]))
     }
 }
