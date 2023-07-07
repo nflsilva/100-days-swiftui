@@ -33,7 +33,7 @@ struct ContentView: View {
             }
         }
         .task {
-            loadData()
+            await loadData()
         }
         .alert(alertTitle, isPresented: $isShowingAlert) {
             Button("OK") { }
@@ -43,24 +43,24 @@ struct ContentView: View {
         .navigationTitle("iUsers")
     }
     
-    private func loadData() {
+    private func loadData() async {
         if(isLoading || !users.isEmpty){ return }
         
         isLoading = true
         
-        usersController.GetUsers() { users, error in
+        let users = await usersController.getUsers()
             
-            if let error = error {
-                isLoading = false
-                alertTitle = "Error loading data"
-                alertMessage = error.localizedDescription
-                isShowingAlert = true
-                return
-            }
-            
-            self.users = users
+        if users == nil {
             isLoading = false
+            alertTitle = "Error loading data"
+            alertMessage = "An error occured"
+            isShowingAlert = true
+            return
         }
+        
+        
+        self.users = users!
+        isLoading = false
         
             
     }

@@ -14,34 +14,21 @@ struct RemoteAPI {
         case InvalidDataError = "API returned invalid data."
     }
     
-    static func GetUsers(completion: @escaping ([UserDTO], Error?) -> Void) {
+    static func GetUsers() async -> [UserDTO]? {
         
         let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json")!
-        
-        let task = URLSession.shared.dataTask(with: url) { data, _, requestError in
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
             
-            //completion([], APIError.NoDataError)
-            //return
+            let users = try JSONDecoder().decode([UserDTO].self, from: data)
+            sleep(4) // simulate slow connection
+            return users
             
-            if let requestError = requestError {
-                completion([], requestError)
-                return
-            }
-            
-            guard let data = data else {
-                completion([], APIError.NoDataError)
-                return
-            }
-            
-            do {
-                let users = try JSONDecoder().decode([UserDTO].self, from: data)
-                sleep(4)
-                completion(users, nil)
-            } catch {
-                completion([], error)
-            }
+        } catch {
+            return nil
         }
-        task.resume()
+
+
     }
     
 }

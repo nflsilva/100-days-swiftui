@@ -11,16 +11,15 @@ import SwiftUI
 struct UserController {
     
     @Environment(\.managedObjectContext) private var moc
-    @FetchRequest(sortDescriptors: []) private var users: FetchedResults<CDUser>
+    @FetchRequest(sortDescriptors: []) private var cdusers: FetchedResults<CDUser>
 
-    func GetUsers(completion: @escaping ([UserDTO], Error?) -> Void) {
+    func getUsers() async -> [UserDTO]? {
         
-        RemoteAPI.GetUsers() { data, error in
-            
-            if error == nil {
-                    
-                for user in data {
-                    
+        let users = await RemoteAPI.GetUsers()
+        if users != nil {
+            for user in users! {
+
+                await MainActor.run {
                     let cdUser = CDUser(context: moc)
                     cdUser.id = user.id
                     cdUser.name = user.name
@@ -52,40 +51,38 @@ struct UserController {
                         print(error.localizedDescription)
                     }
                 }
-                
-                completion(data, nil)
-
             }
-            else {
-                var result = [UserDTO]()
-                for user in users {
-                    var tags = [String]()
-                    let preTags = user.tags?.split(separator: ",") ?? []
-                    for t in preTags {
-                        tags.append(String(t))
-                    }
-                    
-                    var friends = [FriendDTO]()
-                    /*
-                    for f in user.friends ?? NSSet() {
-                        let ff = f as! CDFriend
-                        friends.append(FriendDTO(id: ff.id ?? UUID(),
-                                                 name: ff.name ?? ""))
-                    }*/
-                    
-                    result.append(UserDTO(id: user.id ?? UUID(),
-                                          isActive: user.isActive,
-                                          name: user.name ?? "",
-                                          age: Int(user.age),
-                                          company: user.company ?? "",
-                                          email: user.email ?? "",
-                                          address: user.address ?? "",
-                                          about: user.about ?? "",
-                                          tags: tags,
-                                          friends: friends))
+            return users
+        }
+        else {
+            var result = [UserDTO]()
+            for user in cdusers {
+                var tags = [String]()
+                let preTags = user.tags?.split(separator: ",") ?? []
+                for t in preTags {
+                    tags.append(String(t))
                 }
-                completion(result, nil)
+                
+                var friends = [FriendDTO]()
+                /*
+                for f in user.friends ?? NSSet() {
+                    let ff = f as! CDFriend
+                    friends.append(FriendDTO(id: ff.id ?? UUID(),
+                                             name: ff.name ?? ""))
+                }*/
+                
+                result.append(UserDTO(id: user.id ?? UUID(),
+                                      isActive: user.isActive,
+                                      name: user.name ?? "",
+                                      age: Int(user.age),
+                                      company: user.company ?? "",
+                                      email: user.email ?? "",
+                                      address: user.address ?? "",
+                                      about: user.about ?? "",
+                                      tags: tags,
+                                      friends: friends))
             }
+            return result
         }
     }
     
