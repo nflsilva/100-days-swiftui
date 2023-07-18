@@ -91,40 +91,45 @@ struct UserDetailView: View {
                 
                 VStack {
                     
-                    HStack {
-                        Text(user.name)
-                            .font(.headline)
-                        Spacer()
-                    }
-                    
-                    HStack {
-                        Text(user.about)
-                            .padding(.top, 1)
-                        Spacer()
-                    }
-
-                    HStack {
-                        Text(user.address)
-                        Spacer()
-                    }
-                    
-                    HStack(alignment: .top) {
-                        Group {
-                            Text("Tagged by ")
-                                .foregroundColor(.primary.opacity(0.25)) +
-                            
-                            Text(user.randomTags) +
-                            
-                            Text(user.tags.count - 3 <= 0 ? "" : " + ")
-                                .foregroundColor(.primary.opacity(0.25)) +
-                            
-                            Text(user.tags.count - 3 <= 0 ? "" : "\(user.tags.count - 3) more")
+                    VStack {
+                        
+                        HStack {
+                            Text(user.name)
+                                .font(.headline)
+                            Spacer()
+                        }
+                        
+                        HStack {
+                            Text(user.about)
+                                .padding(.top, 1)
+                            Spacer()
                         }
 
-                        Spacer()
+                        HStack {
+                            Text(user.address)
+                            Spacer()
+                        }
+                        
+                        HStack(alignment: .top) {
+                            Group {
+                                Text("Tagged by ")
+                                    .foregroundColor(.primary.opacity(0.25)) +
+                                
+                                Text(user.randomTags) +
+                                
+                                Text(user.tags.count - 3 <= 0 ? "" : " + ")
+                                    .foregroundColor(.primary.opacity(0.25)) +
+                                
+                                Text(user.tags.count - 3 <= 0 ? "" : "\(user.tags.count - 3) more")
+                            }
+
+                            Spacer()
+                        }
                     }
+                    .padding()
                     
                     ScrollView(.horizontal) {
+                        
                         LazyHStack {
                             ForEach(user.friends) { friend in
                                 VStack {
@@ -148,11 +153,9 @@ struct UserDetailView: View {
 
                             }
                         }
+                        .padding(.horizontal)
                     }
-                    .padding(.vertical)
-                    
                 }
-                .padding()
                 
                 HStack  {
                     Spacer()
