@@ -23,6 +23,13 @@ struct ContentView: View {
             Button("Select an image") {
                 showingPicker = true
             }
+            
+            Button("Save image") {
+                guard let inputImage = inputImage else { return }
+                
+                let imageSaver = ImageSaver()
+                imageSaver.writeToPhotoAlbum(image: inputImage)
+            }
         }
         .sheet(isPresented: $showingPicker) {
             ImagePicker(image: $inputImage)

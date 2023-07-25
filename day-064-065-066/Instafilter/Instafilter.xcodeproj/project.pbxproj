@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		888822522A6DDC5F00E143AF /* ImageAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888822512A6DDC5F00E143AF /* ImageAppApp.swift */; };
-		888822542A6DDC5F00E143AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888822532A6DDC5F00E143AF /* ContentView.swift */; };
-		888822562A6DDC6100E143AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888822552A6DDC6100E143AF /* Assets.xcassets */; };
-		888822592A6DDC6100E143AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888822582A6DDC6100E143AF /* Preview Assets.xcassets */; };
-		888822602A6DDDC100E143AF /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8888225F2A6DDDC100E143AF /* ImagePicker.swift */; };
-		888822622A6ED46600E143AF /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888822612A6ED46600E143AF /* ImageSaver.swift */; };
+		8865077D2A700D89000E9246 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8865077B2A700D88000E9246 /* ImageSaver.swift */; };
+		8865077E2A700D89000E9246 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8865077C2A700D88000E9246 /* ImagePicker.swift */; };
+		886C6B682A6FFFCA0002681F /* InstafilterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C6B672A6FFFCA0002681F /* InstafilterApp.swift */; };
+		886C6B6A2A6FFFCA0002681F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C6B692A6FFFCA0002681F /* ContentView.swift */; };
+		886C6B6C2A6FFFCE0002681F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 886C6B6B2A6FFFCE0002681F /* Assets.xcassets */; };
+		886C6B6F2A6FFFCE0002681F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 886C6B6E2A6FFFCE0002681F /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8888224E2A6DDC5F00E143AF /* ImageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		888822512A6DDC5F00E143AF /* ImageAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAppApp.swift; sourceTree = "<group>"; };
-		888822532A6DDC5F00E143AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		888822552A6DDC6100E143AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		888822582A6DDC6100E143AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8888225F2A6DDDC100E143AF /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		888822612A6ED46600E143AF /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		8865077B2A700D88000E9246 /* ImageSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageSaver.swift; path = Instafilter/ImageSaver.swift; sourceTree = SOURCE_ROOT; };
+		8865077C2A700D88000E9246 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagePicker.swift; path = Instafilter/ImagePicker.swift; sourceTree = SOURCE_ROOT; };
+		886C6B642A6FFFCA0002681F /* Instafilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instafilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		886C6B672A6FFFCA0002681F /* InstafilterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstafilterApp.swift; sourceTree = "<group>"; };
+		886C6B692A6FFFCA0002681F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		886C6B6B2A6FFFCE0002681F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		886C6B6E2A6FFFCE0002681F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8888224B2A6DDC5F00E143AF /* Frameworks */ = {
+		886C6B612A6FFFCA0002681F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,79 +36,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		888822452A6DDC5F00E143AF = {
+		8865077A2A700D75000E9246 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				888822502A6DDC5F00E143AF /* ImageApp */,
-				8888224F2A6DDC5F00E143AF /* Products */,
+				8865077C2A700D88000E9246 /* ImagePicker.swift */,
+				8865077B2A700D88000E9246 /* ImageSaver.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		886C6B5B2A6FFFCA0002681F = {
+			isa = PBXGroup;
+			children = (
+				886C6B662A6FFFCA0002681F /* Instafilter */,
+				886C6B652A6FFFCA0002681F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		8888224F2A6DDC5F00E143AF /* Products */ = {
+		886C6B652A6FFFCA0002681F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8888224E2A6DDC5F00E143AF /* ImageApp.app */,
+				886C6B642A6FFFCA0002681F /* Instafilter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		888822502A6DDC5F00E143AF /* ImageApp */ = {
+		886C6B662A6FFFCA0002681F /* Instafilter */ = {
 			isa = PBXGroup;
 			children = (
-				888822512A6DDC5F00E143AF /* ImageAppApp.swift */,
-				888822532A6DDC5F00E143AF /* ContentView.swift */,
-				888822552A6DDC6100E143AF /* Assets.xcassets */,
-				888822572A6DDC6100E143AF /* Preview Content */,
-				8888225F2A6DDDC100E143AF /* ImagePicker.swift */,
-				888822612A6ED46600E143AF /* ImageSaver.swift */,
+				8865077A2A700D75000E9246 /* Controller */,
+				886C6B752A6FFFFE0002681F /* View */,
+				886C6B672A6FFFCA0002681F /* InstafilterApp.swift */,
+				886C6B6B2A6FFFCE0002681F /* Assets.xcassets */,
+				886C6B6D2A6FFFCE0002681F /* Preview Content */,
 			);
-			path = ImageApp;
+			path = Instafilter;
 			sourceTree = "<group>";
 		};
-		888822572A6DDC6100E143AF /* Preview Content */ = {
+		886C6B6D2A6FFFCE0002681F /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				888822582A6DDC6100E143AF /* Preview Assets.xcassets */,
+				886C6B6E2A6FFFCE0002681F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		886C6B752A6FFFFE0002681F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				886C6B692A6FFFCA0002681F /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8888224D2A6DDC5F00E143AF /* ImageApp */ = {
+		886C6B632A6FFFCA0002681F /* Instafilter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8888225C2A6DDC6100E143AF /* Build configuration list for PBXNativeTarget "ImageApp" */;
+			buildConfigurationList = 886C6B722A6FFFCE0002681F /* Build configuration list for PBXNativeTarget "Instafilter" */;
 			buildPhases = (
-				8888224A2A6DDC5F00E143AF /* Sources */,
-				8888224B2A6DDC5F00E143AF /* Frameworks */,
-				8888224C2A6DDC5F00E143AF /* Resources */,
+				886C6B602A6FFFCA0002681F /* Sources */,
+				886C6B612A6FFFCA0002681F /* Frameworks */,
+				886C6B622A6FFFCA0002681F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ImageApp;
-			productName = ImageApp;
-			productReference = 8888224E2A6DDC5F00E143AF /* ImageApp.app */;
+			name = Instafilter;
+			productName = Instafilter;
+			productReference = 886C6B642A6FFFCA0002681F /* Instafilter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		888822462A6DDC5F00E143AF /* Project object */ = {
+		886C6B5C2A6FFFCA0002681F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					8888224D2A6DDC5F00E143AF = {
+					886C6B632A6FFFCA0002681F = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 888822492A6DDC5F00E143AF /* Build configuration list for PBXProject "ImageApp" */;
+			buildConfigurationList = 886C6B5F2A6FFFCA0002681F /* Build configuration list for PBXProject "Instafilter" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,44 +132,44 @@
 				en,
 				Base,
 			);
-			mainGroup = 888822452A6DDC5F00E143AF;
-			productRefGroup = 8888224F2A6DDC5F00E143AF /* Products */;
+			mainGroup = 886C6B5B2A6FFFCA0002681F;
+			productRefGroup = 886C6B652A6FFFCA0002681F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8888224D2A6DDC5F00E143AF /* ImageApp */,
+				886C6B632A6FFFCA0002681F /* Instafilter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8888224C2A6DDC5F00E143AF /* Resources */ = {
+		886C6B622A6FFFCA0002681F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888822592A6DDC6100E143AF /* Preview Assets.xcassets in Resources */,
-				888822562A6DDC6100E143AF /* Assets.xcassets in Resources */,
+				886C6B6F2A6FFFCE0002681F /* Preview Assets.xcassets in Resources */,
+				886C6B6C2A6FFFCE0002681F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8888224A2A6DDC5F00E143AF /* Sources */ = {
+		886C6B602A6FFFCA0002681F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888822602A6DDDC100E143AF /* ImagePicker.swift in Sources */,
-				888822542A6DDC5F00E143AF /* ContentView.swift in Sources */,
-				888822522A6DDC5F00E143AF /* ImageAppApp.swift in Sources */,
-				888822622A6ED46600E143AF /* ImageSaver.swift in Sources */,
+				886C6B6A2A6FFFCA0002681F /* ContentView.swift in Sources */,
+				8865077E2A700D89000E9246 /* ImagePicker.swift in Sources */,
+				8865077D2A700D89000E9246 /* ImageSaver.swift in Sources */,
+				886C6B682A6FFFCA0002681F /* InstafilterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		8888225A2A6DDC6100E143AF /* Debug */ = {
+		886C6B702A6FFFCE0002681F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -214,7 +230,7 @@
 			};
 			name = Debug;
 		};
-		8888225B2A6DDC6100E143AF /* Release */ = {
+		886C6B712A6FFFCE0002681F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -269,14 +285,14 @@
 			};
 			name = Release;
 		};
-		8888225D2A6DDC6100E143AF /* Debug */ = {
+		886C6B732A6FFFCE0002681F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ImageApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Instafilter/Preview Content\"";
 				DEVELOPMENT_TEAM = G4D7QHTNZ6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -290,7 +306,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nflsilva.ios.ImageApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nflsilva.ios.Instafilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -298,14 +314,14 @@
 			};
 			name = Debug;
 		};
-		8888225E2A6DDC6100E143AF /* Release */ = {
+		886C6B742A6FFFCE0002681F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ImageApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Instafilter/Preview Content\"";
 				DEVELOPMENT_TEAM = G4D7QHTNZ6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -319,7 +335,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nflsilva.ios.ImageApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nflsilva.ios.Instafilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -330,25 +346,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		888822492A6DDC5F00E143AF /* Build configuration list for PBXProject "ImageApp" */ = {
+		886C6B5F2A6FFFCA0002681F /* Build configuration list for PBXProject "Instafilter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8888225A2A6DDC6100E143AF /* Debug */,
-				8888225B2A6DDC6100E143AF /* Release */,
+				886C6B702A6FFFCE0002681F /* Debug */,
+				886C6B712A6FFFCE0002681F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8888225C2A6DDC6100E143AF /* Build configuration list for PBXNativeTarget "ImageApp" */ = {
+		886C6B722A6FFFCE0002681F /* Build configuration list for PBXNativeTarget "Instafilter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8888225D2A6DDC6100E143AF /* Debug */,
-				8888225E2A6DDC6100E143AF /* Release */,
+				886C6B732A6FFFCE0002681F /* Debug */,
+				886C6B742A6FFFCE0002681F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 888822462A6DDC5F00E143AF /* Project object */;
+	rootObject = 886C6B5C2A6FFFCA0002681F /* Project object */;
 }
