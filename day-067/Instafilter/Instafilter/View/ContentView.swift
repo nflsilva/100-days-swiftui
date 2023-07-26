@@ -18,6 +18,7 @@ struct ContentView: View {
     @State private var showingImagePicker = false
     @State private var showingFilterSelection = false
     @State private var intensity = 0.5
+    @State private var radius = 0.5
     
     @State private var currentFilter: CIFilter = CIFilter.sepiaTone()
     private let ciContext = CIContext()
@@ -47,7 +48,14 @@ struct ContentView: View {
                 HStack {
                     Text("Intensity")
                     Slider(value: $intensity)
-                        .onChange(of: intensity) { _ in onIntensityChange() }
+                        .onChange(of: intensity) { _ in onSliderChange() }
+                }
+                .padding(.bottom)
+                
+                HStack {
+                    Text("Radius")
+                    Slider(value: $radius)
+                        .onChange(of: radius) { _ in onSliderChange() }
                 }
                 .padding(.bottom)
                 
@@ -55,6 +63,7 @@ struct ContentView: View {
                     Button("Change Filter", action: changeFilter)
                     Spacer()
                     Button("Save", action: save)
+                        .disabled(processedUIImage == nil)
                 }
                 
             }
@@ -83,14 +92,14 @@ struct ContentView: View {
         
         let beginImage = CIImage(image: inputImage)
         currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
-        onIntensityChange()
+        onSliderChange()
     }
     
     private func onSelectPictureTap() {
         self.showingImagePicker = true
     }
     
-    private func onIntensityChange() {
+    private func onSliderChange() {
         let inputKeys = currentFilter.inputKeys
         
         if inputKeys.contains(kCIInputIntensityKey) {
@@ -98,7 +107,7 @@ struct ContentView: View {
         }
         
         if inputKeys.contains(kCIInputRadiusKey) {
-            currentFilter.setValue(intensity * 200, forKey: kCIInputRadiusKey)
+            currentFilter.setValue(radius * 200, forKey: kCIInputRadiusKey)
         }
         
         if inputKeys.contains(kCIInputScaleKey) {
