@@ -20,5 +20,4 @@ class DataModelController: ObservableObject {
         
         container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
     }
-    
 }
