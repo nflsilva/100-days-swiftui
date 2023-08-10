@@ -1,0 +1,398 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		88689C672A8530AB0033F2F2 /* iPeopleChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88689C662A8530AB0033F2F2 /* iPeopleChallengeApp.swift */; };
+		88689C692A8530AB0033F2F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88689C682A8530AB0033F2F2 /* ContentView.swift */; };
+		88689C6B2A8530AE0033F2F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88689C6A2A8530AE0033F2F2 /* Assets.xcassets */; };
+		88689C6E2A8530AE0033F2F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88689C6D2A8530AE0033F2F2 /* Preview Assets.xcassets */; };
+		88689C792A85328D0033F2F2 /* ContentView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88689C782A85328D0033F2F2 /* ContentView+ViewModel.swift */; };
+		88689C7B2A85370A0033F2F2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88689C7A2A85370A0033F2F2 /* Person.swift */; };
+		88689C7D2A85381D0033F2F2 /* Bundle+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88689C7C2A85381D0033F2F2 /* Bundle+Codable.swift */; };
+		88689C7F2A853EB90033F2F2 /* AddPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88689C7E2A853EB90033F2F2 /* AddPersonView.swift */; };
+		88689C812A853F8C0033F2F2 /* AddPersonView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88689C802A853F8C0033F2F2 /* AddPersonView+ViewModel.swift */; };
+		88689C832A8540780033F2F2 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88689C822A8540780033F2F2 /* PhotoPickerView.swift */; };
+		88689C872A85AC030033F2F2 /* PersonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88689C862A85AC030033F2F2 /* PersonDetailView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		88689C632A8530AB0033F2F2 /* iPeopleChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPeopleChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88689C662A8530AB0033F2F2 /* iPeopleChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPeopleChallengeApp.swift; sourceTree = "<group>"; };
+		88689C682A8530AB0033F2F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		88689C6A2A8530AE0033F2F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		88689C6D2A8530AE0033F2F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		88689C782A85328D0033F2F2 /* ContentView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+ViewModel.swift"; sourceTree = "<group>"; };
+		88689C7A2A85370A0033F2F2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		88689C7C2A85381D0033F2F2 /* Bundle+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Codable.swift"; sourceTree = "<group>"; };
+		88689C7E2A853EB90033F2F2 /* AddPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonView.swift; sourceTree = "<group>"; };
+		88689C802A853F8C0033F2F2 /* AddPersonView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddPersonView+ViewModel.swift"; sourceTree = "<group>"; };
+		88689C822A8540780033F2F2 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
+		88689C862A85AC030033F2F2 /* PersonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88689C602A8530AB0033F2F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		88689C5A2A8530AB0033F2F2 = {
+			isa = PBXGroup;
+			children = (
+				88689C652A8530AB0033F2F2 /* iPeopleChallenge */,
+				88689C642A8530AB0033F2F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		88689C642A8530AB0033F2F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88689C632A8530AB0033F2F2 /* iPeopleChallenge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88689C652A8530AB0033F2F2 /* iPeopleChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				88689C772A8530EE0033F2F2 /* ViewModel */,
+				88689C762A8530E10033F2F2 /* Model */,
+				88689C742A8530D10033F2F2 /* View */,
+				88689C662A8530AB0033F2F2 /* iPeopleChallengeApp.swift */,
+				88689C6A2A8530AE0033F2F2 /* Assets.xcassets */,
+				88689C6C2A8530AE0033F2F2 /* Preview Content */,
+			);
+			path = iPeopleChallenge;
+			sourceTree = "<group>";
+		};
+		88689C6C2A8530AE0033F2F2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				88689C6D2A8530AE0033F2F2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		88689C742A8530D10033F2F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88689C822A8540780033F2F2 /* PhotoPickerView.swift */,
+				88689C682A8530AB0033F2F2 /* ContentView.swift */,
+				88689C7E2A853EB90033F2F2 /* AddPersonView.swift */,
+				88689C862A85AC030033F2F2 /* PersonDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88689C762A8530E10033F2F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88689C7A2A85370A0033F2F2 /* Person.swift */,
+				88689C7C2A85381D0033F2F2 /* Bundle+Codable.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88689C772A8530EE0033F2F2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				88689C782A85328D0033F2F2 /* ContentView+ViewModel.swift */,
+				88689C802A853F8C0033F2F2 /* AddPersonView+ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88689C622A8530AB0033F2F2 /* iPeopleChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88689C712A8530AE0033F2F2 /* Build configuration list for PBXNativeTarget "iPeopleChallenge" */;
+			buildPhases = (
+				88689C5F2A8530AB0033F2F2 /* Sources */,
+				88689C602A8530AB0033F2F2 /* Frameworks */,
+				88689C612A8530AB0033F2F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iPeopleChallenge;
+			productName = iPeopleChallenge;
+			productReference = 88689C632A8530AB0033F2F2 /* iPeopleChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88689C5B2A8530AB0033F2F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					88689C622A8530AB0033F2F2 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 88689C5E2A8530AB0033F2F2 /* Build configuration list for PBXProject "iPeopleChallenge" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 88689C5A2A8530AB0033F2F2;
+			productRefGroup = 88689C642A8530AB0033F2F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88689C622A8530AB0033F2F2 /* iPeopleChallenge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88689C612A8530AB0033F2F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88689C6E2A8530AE0033F2F2 /* Preview Assets.xcassets in Resources */,
+				88689C6B2A8530AE0033F2F2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88689C5F2A8530AB0033F2F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88689C7D2A85381D0033F2F2 /* Bundle+Codable.swift in Sources */,
+				88689C692A8530AB0033F2F2 /* ContentView.swift in Sources */,
+				88689C7F2A853EB90033F2F2 /* AddPersonView.swift in Sources */,
+				88689C672A8530AB0033F2F2 /* iPeopleChallengeApp.swift in Sources */,
+				88689C872A85AC030033F2F2 /* PersonDetailView.swift in Sources */,
+				88689C832A8540780033F2F2 /* PhotoPickerView.swift in Sources */,
+				88689C812A853F8C0033F2F2 /* AddPersonView+ViewModel.swift in Sources */,
+				88689C7B2A85370A0033F2F2 /* Person.swift in Sources */,
+				88689C792A85328D0033F2F2 /* ContentView+ViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		88689C6F2A8530AE0033F2F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		88689C702A8530AE0033F2F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88689C722A8530AE0033F2F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iPeopleChallenge/Preview Content\"";
+				DEVELOPMENT_TEAM = G4D7QHTNZ6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nflsilva.ios.iPeopleChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		88689C732A8530AE0033F2F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iPeopleChallenge/Preview Content\"";
+				DEVELOPMENT_TEAM = G4D7QHTNZ6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nflsilva.ios.iPeopleChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88689C5E2A8530AB0033F2F2 /* Build configuration list for PBXProject "iPeopleChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88689C6F2A8530AE0033F2F2 /* Debug */,
+				88689C702A8530AE0033F2F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88689C712A8530AE0033F2F2 /* Build configuration list for PBXNativeTarget "iPeopleChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88689C722A8530AE0033F2F2 /* Debug */,
+				88689C732A8530AE0033F2F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 88689C5B2A8530AB0033F2F2 /* Project object */;
+}
