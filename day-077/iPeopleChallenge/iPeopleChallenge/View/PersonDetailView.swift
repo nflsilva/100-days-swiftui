@@ -14,9 +14,6 @@ struct PersonDetailView: View {
     
     init(person: Person) {
         _person = State(initialValue: person)
-        if let uiImage = UIImage(contentsOfFile: person.picturePath) {
-            image = Image(uiImage: uiImage)
-        }
     }
     
     var body: some View {
@@ -32,8 +29,18 @@ struct PersonDetailView: View {
             
         }
         .navigationTitle(person.name)
+        .onAppear {
+            loadImage()
+        }
         
     }
+    
+    private func loadImage() {
+        if let uiImage = UIImage(contentsOfFile: person.picturePath) {
+            image = Image(uiImage: uiImage)
+        }
+    }
+    
 }
 
 struct PersonDetailView_Previews: PreviewProvider {
